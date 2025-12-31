@@ -35,13 +35,9 @@ function playRound(humanSelect, computerSelect) {
     console.log(`Computer: ${computerSelect}`);
     if (humanSelect == computerSelect) {
         console.log('Draw: No score!');
-    } else if (humanSelect == 'scissors' && computerSelect == 'paper') {
-        console.log(`You win! ${humanSelect} beats ${computerSelect}.`);
-        humanScore++
-    } else if (humanSelect == 'rock' && computerSelect == 'scissors') {
-        console.log(`You win! ${humanSelect} beats ${computerSelect}.`);
-        humanScore++
-    } else if (humanSelect == 'paper' && computerSelect == 'rock') {
+    } else if ((humanSelect == 'scissors' && computerSelect == 'paper') || 
+    (humanSelect == 'rock' && computerSelect == 'scissors') ||
+    (humanSelect == 'paper' && computerSelect == 'rock')) {
         console.log(`You win! ${humanSelect} beats ${computerSelect}.`);
         humanScore++
     } else {
